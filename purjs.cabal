@@ -1,0 +1,43 @@
+cabal-version:       2.4
+-- For further documentation, see http://haskell.org/cabal/users-guide/
+
+name:                purjs
+version:             0.1.0.0
+synopsis:            wrapper for running purs in browser
+-- description:
+-- bug-reports:
+license:             BSD-3-Clause
+license-file:        LICENSE
+author:              TheMatten
+maintainer:          matten@tuta.io
+-- copyright:
+category:            Language
+extra-source-files:  CHANGELOG.md
+
+common shared
+  default-language:    Haskell2010
+  default-extensions:  OverloadedStrings
+  build-depends:       base ^>=4.12.0.0,
+                       text ^>=1.2.4.0
+
+library
+  import: shared
+  exposed-modules:     Language.PureScript.Web
+  -- other-modules:
+  build-depends:
+                       containers ^>=0.6.0.1,
+                       mtl ^>=2.2.2,
+                       purescript
+
+  hs-source-dirs:      src
+
+
+  -- other-extensions:
+
+executable purjs
+  import: shared
+  main-is:             Main.hs
+  -- other-modules:
+  -- other-extensions:
+  build-depends:       purjs
+  hs-source-dirs:      app

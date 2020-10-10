@@ -1,0 +1,6 @@
+[submodule "reflex-platform"]
+	path = reflex-platform
+	url = https://github.com/reflex-frp/reflex-platform
+[submodule "purescript"]
+	path = purescript
+	url = https://github.com/purescript/purescript

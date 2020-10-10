@@ -1,0 +1,7 @@
+packages:
+  .,
+  purescript,
+  purescript/lib/purescript-cst,
+  purescript/lib/purescript-ast
+
+compiler: ghcjs
